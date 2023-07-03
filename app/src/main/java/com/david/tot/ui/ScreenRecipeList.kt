@@ -25,7 +25,7 @@ import com.david.tot.util.IMAGE_BASE_URL
 
 @Composable
 fun ScreenRecipeList(navegarPantalla2: (String) -> Unit,recipeViewModel:RecipeViewModel) {
-    //recipeViewModel.onCreate()
+    recipeViewModel.onCreate()
     Column(
         modifier = Modifier.fillMaxSize().padding(16.dp),horizontalAlignment = Alignment.CenterHorizontally
     ) {

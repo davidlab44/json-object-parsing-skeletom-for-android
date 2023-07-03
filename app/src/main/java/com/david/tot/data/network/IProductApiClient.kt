@@ -9,7 +9,7 @@ import retrofit2.http.*
 //import retrofit2.Retrofit
 
 interface IProductApiClient {
-    @GET("products")
+    @GET("2168bffa-9889-4a01-869c-32f62026a19f")
     suspend fun getAllRecipes(): Response<List<Product>>
 
     @POST("products")

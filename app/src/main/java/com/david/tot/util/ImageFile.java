@@ -24,7 +24,8 @@ public class ImageFile {
         ByteArrayInputStream bs = new ByteArrayInputStream(bitmapdata);
         return bs;
     }
-/*
+
+    /*
     public BufferedWriter getImage() {
         File file = new File();
         FileOutputStream fileOutputStream = new FileOutputStream(file);
@@ -33,9 +34,7 @@ public class ImageFile {
         bufferedWriter.write(file);
         return bufferedWriter;
     }
-
- */
-
+    */
 
     public byte[] encodeToBase64(Bitmap image)
     {

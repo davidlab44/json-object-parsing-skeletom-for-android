@@ -21,7 +21,7 @@ class RecipeViewModel @Inject constructor(private val getRecipesUseCase: GetReci
 
     var recipeModel by mutableStateOf<List<Product>>(emptyList())
 
-    /*
+
     fun onCreate() {
         //viewModelScope.launch {
         CoroutineScope(Dispatchers.IO).launch {
@@ -36,13 +36,13 @@ class RecipeViewModel @Inject constructor(private val getRecipesUseCase: GetReci
             val ff =77
             */
 
-            val result = getRecipesUseCase.invoke(st)
+            val result = getRecipesUseCase.invoke()
             if (!result.isNullOrEmpty()) {
                 recipeModel =result
             }
         }
     }
-    */
+
 
     /*
     fun updateRecipeList(hash:String){
