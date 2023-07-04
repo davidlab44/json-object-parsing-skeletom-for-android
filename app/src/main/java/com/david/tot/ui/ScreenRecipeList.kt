@@ -26,6 +26,8 @@ import com.david.tot.util.IMAGE_BASE_URL
 @Composable
 fun ScreenRecipeList(navegarPantalla2: (String) -> Unit,recipeViewModel:RecipeViewModel) {
     recipeViewModel.onCreate()
+
+  /*
     Column(
         modifier = Modifier.fillMaxSize().padding(16.dp),horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -52,6 +54,8 @@ fun ScreenRecipeList(navegarPantalla2: (String) -> Unit,recipeViewModel:RecipeVi
         */
         //recipeViewModel.updateRecipeList(text)
         //Text(text="Aqui"+text)
+
+
         val listModifier = Modifier.fillMaxSize().background(Color.White).padding(10.dp).align(Alignment.CenterHorizontally)
         LazyColumn(modifier = listModifier) {
             //val recipeList =recipeViewModel.recipeModel
@@ -90,7 +94,7 @@ fun ScreenRecipeList(navegarPantalla2: (String) -> Unit,recipeViewModel:RecipeVi
             }
         }
     }
-
+*/
 
 
 

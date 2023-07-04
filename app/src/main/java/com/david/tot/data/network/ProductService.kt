@@ -10,8 +10,12 @@ class ProductService @Inject constructor(private val api:IProductApiClient) {
     suspend fun getRecipes(): List<Product> {
         //api.rawJSON()
         return withContext(Dispatchers.IO) {
+            val response2 = api.getAllRecipes()
+            val response3 = response2.toString()
             val response = api.getAllRecipes().body()!!.data
-            response ?: emptyList()
+            val tt =response.toString()
+            val tt2 =response.toString()+tt
+            response
         }
     }
 
