@@ -27,7 +27,7 @@ import com.david.tot.util.IMAGE_BASE_URL
 fun ScreenRecipeList(navegarPantalla2: (String) -> Unit,recipeViewModel:RecipeViewModel) {
     recipeViewModel.onCreate()
 
-  /*
+
     Column(
         modifier = Modifier.fillMaxSize().padding(16.dp),horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -94,7 +94,7 @@ fun ScreenRecipeList(navegarPantalla2: (String) -> Unit,recipeViewModel:RecipeVi
             }
         }
     }
-*/
+
 
 
 

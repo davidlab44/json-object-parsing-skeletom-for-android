@@ -1,6 +1,7 @@
 package com.david.tot.ui
 
 import android.content.Intent
+import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -21,9 +22,11 @@ class RecipeViewModel @Inject constructor(private val getRecipesUseCase: GetReci
 
     var recipeModel by mutableStateOf<List<Product>>(emptyList())
 
-
     fun onCreate() {
+        Log.e("TAG","TAG")
         //viewModelScope.launch {
+
+        /*
         CoroutineScope(Dispatchers.IO).launch {
             //ProductRepository().requestProductList()
             //val product = Product(999,"Espinaca","fruiit.jpg", "glu glu glu",10000,0,0,1)
@@ -41,6 +44,7 @@ class RecipeViewModel @Inject constructor(private val getRecipesUseCase: GetReci
                 recipeModel =result
             }
         }
+        */
     }
 
 

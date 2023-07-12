@@ -11,8 +11,8 @@ import retrofit2.http.*
 
 interface IProductApiClient {
     //@GET("2168bffa-9889-4a01-869c-32f62026a19f")
-    //@GET("8fa604ab-186b-4648-ad1b-6b204294314d")
-    @GET("department")
+    @GET("8fa604ab-186b-4648-ad1b-6b204294314d")
+    //@GET("department")
     suspend fun getAllRecipes(): Response<ProductResponse>
 
     @POST("products")
