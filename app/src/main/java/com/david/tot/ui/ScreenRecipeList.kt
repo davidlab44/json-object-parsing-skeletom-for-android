@@ -58,8 +58,10 @@ fun ScreenRecipeList(navegarPantalla2: (String) -> Unit,recipeViewModel:RecipeVi
 
         val listModifier = Modifier.fillMaxSize().background(Color.White).padding(10.dp).align(Alignment.CenterHorizontally)
         LazyColumn(modifier = listModifier) {
-            //val recipeList =recipeViewModel.recipeModel
-            val recipeList =CheckList
+            val recipeList2 =recipeViewModel.recipeModel
+            //val recipeList =CheckList
+
+            val recipeList =recipeViewModel.recipeModel
             items(recipeList) { recipe ->
                 Card(
                     modifier = Modifier.fillMaxWidth().padding(8.dp).clickable{ navegarPantalla2(recipe.id.toString()) },
