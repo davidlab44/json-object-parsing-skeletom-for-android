@@ -19,7 +19,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.rememberImagePainter
-import com.david.dfv.util.CheckList
+import com.david.tot.util.CheckList
 import com.david.tot.util.IMAGE_BASE_URL
 
 
@@ -94,7 +94,6 @@ fun ScreenRecipeList(navegarPantalla2: (String) -> Unit,recipeViewModel:RecipeVi
             }
         }
     }
-
 
 
 

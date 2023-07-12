@@ -26,7 +26,7 @@ class RecipeViewModel @Inject constructor(private val getRecipesUseCase: GetReci
         Log.e("TAG","TAG")
         //viewModelScope.launch {
 
-        /*
+
         CoroutineScope(Dispatchers.IO).launch {
             //ProductRepository().requestProductList()
             //val product = Product(999,"Espinaca","fruiit.jpg", "glu glu glu",10000,0,0,1)
@@ -44,7 +44,7 @@ class RecipeViewModel @Inject constructor(private val getRecipesUseCase: GetReci
                 recipeModel =result
             }
         }
-        */
+
     }
 
 
