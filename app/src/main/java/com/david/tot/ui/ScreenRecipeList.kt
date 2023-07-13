@@ -36,12 +36,14 @@ fun ScreenRecipeList(navegarPantalla2: (String) -> Unit,recipeViewModel:RecipeVi
             modifier = Modifier.padding(all = 12.dp),
             horizontalArrangement = Arrangement.Center
         ){
+            /*
             Image(
                 painter = rememberImagePainter("https://upload.wikimedia.org/wikipedia/commons/a/ae/SEPT_17TH_LOS_ANGELES_INTERNATIONAL_TRUCK_PHOTO_PATRICE_RAUNET_HOLLYWOOD.jpg"),
                 contentDescription = null,
                 Modifier
                     .height(200.dp)
             )
+            */
         }
         /*
         TextField(

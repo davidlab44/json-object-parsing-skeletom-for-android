@@ -12,6 +12,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.text.ClickableText
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
@@ -25,11 +26,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Color.Companion.Blue
+import androidx.compose.ui.graphics.Color.Companion.White
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.david.tot.R
 import com.david.tot.ui.theme.TotTheme
@@ -77,7 +84,7 @@ class MainActivity : ComponentActivity() {
                         },
                         floatingActionButtonPosition = FabPosition.End,
                         drawerContent = {
-                            DrawerContent { itemLabel ->
+                            DrawerContent(context=this@MainActivity) { itemLabel ->
                                 Toast
                                     .makeText(contextForToast, itemLabel, Toast.LENGTH_SHORT)
                                     .show()
@@ -147,6 +154,7 @@ private fun MyTopAppBar(onNavIconClick: () -> Unit) {
 
 @Composable
 private fun DrawerContent(
+    context:MainActivity,
     gradientColors: List<Color> = listOf(Color(0xFFF70A74), Color(0xFFF59118)),
     itemClick: (String) -> Unit
 ) {
@@ -278,12 +286,15 @@ private fun DrawerContent(
                     contentDescription = "Configuracion"
                 )
                 Spacer(modifier = Modifier.width(20.dp))
-                Text(
-                    modifier = Modifier
-                        .padding(top = 12.dp),
-                    text = "Configuracion",
-                    fontSize = 26.sp,
-                    color = Color.White
+                ClickableText(
+                    style = TextStyle(
+                        color = White,
+                        fontSize = 26.sp
+                    ),
+                    text = AnnotatedString("Configuracion") ,
+                    onClick = {
+                        context.startActivity(Intent(context,AddProductActivity::class.java))
+                    }
                 )
             }
         }
@@ -302,12 +313,16 @@ private fun DrawerContent(
                     contentDescription = "Perfil"
                 )
                 Spacer(modifier = Modifier.width(20.dp))
-                Text(
-                    modifier = Modifier
-                        .padding(top = 12.dp),
-                    text = "Perfil",
-                    fontSize = 26.sp,
-                    color = Color.White
+
+                ClickableText(
+                    style = TextStyle(
+                        color = White,
+                        fontSize = 26.sp
+                    ),
+                    text = AnnotatedString("Perfil") ,
+                    onClick = {
+                        context.startActivity(Intent(context,AddProductActivity::class.java))
+                    }
                 )
             }
         }

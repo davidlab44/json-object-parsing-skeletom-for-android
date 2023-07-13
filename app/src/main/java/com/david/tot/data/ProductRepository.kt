@@ -21,6 +21,11 @@ class ProductRepository @Inject constructor(
         return response.map { it.toDomain() }
     }
 
+    suspend fun sendCredentialsToApi(): List<Product> {
+        val response: List<Product> = api.getRecipes()
+        return response.map { it.toDomain() }
+    }
+
     suspend fun addProduct(product:Product):Int{
         return api.addProduct(product)
     }
