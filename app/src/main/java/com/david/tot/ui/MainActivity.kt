@@ -310,7 +310,7 @@ private fun DrawerContent(
                         .size(size = 25.dp)
                         .clip(shape = CircleShape),
                     painter = painterResource(id = R.drawable.baseline_home_24),
-                    contentDescription = "Perfil"
+                    contentDescription = "Salir"
                 )
                 Spacer(modifier = Modifier.width(20.dp))
 
@@ -319,9 +319,9 @@ private fun DrawerContent(
                         color = White,
                         fontSize = 26.sp
                     ),
-                    text = AnnotatedString("Perfil") ,
+                    text = AnnotatedString("Salir") ,
                     onClick = {
-                        context.startActivity(Intent(context,AddProductActivity::class.java))
+                        context.startActivity(Intent(context,LoginActivity::class.java))
                     }
                 )
             }

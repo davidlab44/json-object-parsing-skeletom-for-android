@@ -21,11 +21,10 @@ import javax.inject.Inject
 class LoginViewModel @Inject constructor(private val getRecipesUseCase: GetRecipesUseCase, private val updateProductUseCase: UpdateProductUseCase) : ViewModel() {
 
     var recipeModel by mutableStateOf<List<Product>>(emptyList())
-
-    fun onCreate() {
+    var responseCode by mutableStateOf<Int>(0)
+    fun login() {
         Log.e("TAG","TAG")
         //viewModelScope.launch {
-
 
         CoroutineScope(Dispatchers.IO).launch {
             //ProductRepository().requestProductList()
@@ -44,9 +43,7 @@ class LoginViewModel @Inject constructor(private val getRecipesUseCase: GetRecip
                 recipeModel =result
             }
         }
-
     }
-
 
     /*
     fun updateRecipeList(hash:String){
@@ -71,10 +68,6 @@ class LoginViewModel @Inject constructor(private val getRecipesUseCase: GetRecip
 
     //Edit Product
     //the purpose of this group of variables is jus pass the necesary information to Screen Detail in order to create bundle
-    var productLocalId by mutableStateOf<Int>(0)
-    var productRemoteId by mutableStateOf<Int>(0)
-    var productName by mutableStateOf<String>("")
-    var productDescription by mutableStateOf<String>("")
-    var productImage by mutableStateOf<String>("")
-    var productPrice by mutableStateOf<Int>(0)
+    //var productLocalId by mutableStateOf<Int>(0)
+
 }
