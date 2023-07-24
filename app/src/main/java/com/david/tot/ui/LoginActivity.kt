@@ -83,8 +83,9 @@ class LoginActivity : ComponentActivity() {
                             OutlinedTextField(
                                 value = email,
                                 onValueChange = {
-                                    loginViewModel.productDescription = it
-                                    email = loginViewModel.productDescription},
+                                    //loginViewModel.productDescription = it
+                                    //email = loginViewModel.productDescription
+                                                },
                                 label = { Text("Usuario:") },
                                 modifier = Modifier
                                     .padding(start = 16.dp, end = 16.dp, top = 20.dp)
@@ -115,8 +116,9 @@ class LoginActivity : ComponentActivity() {
                             OutlinedTextField(
                                 value = password,
                                 onValueChange = {
-                                    loginViewModel.productDescription = it
-                                    password = loginViewModel.productDescription},
+                                    //loginViewModel.productDescription = it
+                                    //password = loginViewModel.productDescription
+                                                },
                                 label = { Text("Contraseña:") },
                                 modifier = Modifier
                                     .padding(start = 16.dp, end = 16.dp, top = 20.dp)
